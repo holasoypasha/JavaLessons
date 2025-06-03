@@ -1,9 +1,16 @@
 package ru.pavlova.lesson.entity;
 
+import ru.pavlova.lesson.entity.animal.Animal;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Human extends Creature {
     private int age;
     private int height;
     protected String name;
+    private List<Animal> animals = new ArrayList<>();
+
     //дефолтный конструктор
     public Human(){
         System.out.println("Вызываю конструктор класса Human");
@@ -35,6 +42,10 @@ public class Human extends Creature {
         this.name = name;
     }
 
+    public List<Animal> getAnimals() {
+        return animals;
+    }
+
     public void sayAboutMe(){
         System.out.println("Привет! Меня зовут " + name + ", мне " + getAge()  + "лет. Мой рост - " + getHeight());
     }
@@ -46,6 +57,7 @@ public class Human extends Creature {
                 "age=" + age +
                 ", height=" + height +
                 ", name='" + name + '\'' +
+                ", Количество животных: " + animals.size() +
                 '}';
     }
 }

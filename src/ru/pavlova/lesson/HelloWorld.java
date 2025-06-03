@@ -10,6 +10,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 class HelloWorld {
+
     public static void main(String[] args) {
         //СОздаем объект класса Women
         Women masha = new Women();
@@ -29,6 +30,7 @@ class HelloWorld {
         masha.sayAboutMe();
         //Вызываем метод родительского класса у объекта stas
         stas.sayAboutMe();
+
 
         //Создаем массив из human
         Human humans[] = new Human[] {masha, stas};

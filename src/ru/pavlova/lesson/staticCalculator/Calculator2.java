@@ -7,7 +7,7 @@ public class Calculator2 {
     /**
      * Счетчик успешно выполненных операций
      */
-    static int operationCounter = 0;
+    private static int operationCounter = 0;
 
     /**
      * Суммирование
@@ -16,7 +16,7 @@ public class Calculator2 {
      * @param b второе слагаемое
      * @return сумма двух чисел
      */
-    static double sum(double a, double b) {
+    public static double sum(double a, double b) {
         operationCounter++;
         return a + b;
     }
@@ -28,7 +28,7 @@ public class Calculator2 {
      * @param b вычитаемое
      * @return разность двух чисел
      */
-    static double subtraction(double a, double b) {
+    public static double subtraction(double a, double b) {
         operationCounter++;
         return a - b;
     }
@@ -40,7 +40,7 @@ public class Calculator2 {
      * @param b второй множитель
      * @return произведение двух чисел
      */
-    static double multiplication(double a, double b) {
+    public static double multiplication(double a, double b) {
         operationCounter++;
         return 0;
     }
@@ -52,7 +52,7 @@ public class Calculator2 {
      * @param b делитель
      * @return частное
      */
-    static double division(double a, double b) {
+    public static double division(double a, double b) {
         if (b != 0) {
             operationCounter++;
             return a / b;
@@ -70,7 +70,7 @@ public class Calculator2 {
      * @param n показатель степени
      * @return степень
      */
-    static double power(double a, double n) {
+    public static double power(double a, double n) {
         operationCounter++;
         return Math.pow(a, n);
     }
@@ -81,7 +81,7 @@ public class Calculator2 {
      * @param n число, возводимое в факториал
      * @return факториал числа n
      */
-    static int factorial(int n) {
+    public static int factorial(int n) {
         int result = 1;
         if (n > 0) {
             operationCounter++;
@@ -99,7 +99,7 @@ public class Calculator2 {
     /**
      * Вывод выполненных операций
      */
-    static void printOperationCounter(){
+    public static void printOperationCounter(){
         System.out.println("Количество успешно выполненных операций: " + operationCounter);
     }
 }
